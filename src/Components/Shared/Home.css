@@ -1,0 +1,43 @@
+/* 
+
+.background-details{
+    display: flex;
+   
+   
+}
+.detail{
+    position: relative;
+   top: 100px;
+}
+.btn-see{
+    height: 60px;
+    width: 180px;
+    background: rgba(255,253,0,0.6);
+    border-radius: 5px;
+    line-height: 25px;
+    letter-spacing: 0.0015rem;
+    color: black;
+    font-size: 18px;
+    position: relative;
+    top: 320px;
+    margin-right: 200px;
+    
+}
+.catagories{
+   display: flex;
+   gap: 25px;
+   position: relative;
+   left: 60px;
+}
+
+.background{
+    padding: 30px;
+    height: 450px;
+    width: 100%;
+    position: relative;
+    right: 100px;
+}
+.facility{
+    position: relative;
+    left: 30px;
+} */

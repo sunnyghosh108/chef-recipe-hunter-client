@@ -1,0 +1,41 @@
+.flex{
+    display:flex;
+   
+    top: 5px;
+    height: 60px;
+    justify-content: space-evenly;
+    gap:20px;
+    background-color: antiquewhite;
+}
+.flex h2{
+    position: relative;
+    text-align: center;
+    
+   
+}
+.menu{
+    display: flex;
+    gap:30px;
+    position: relative;
+    top: 20px;
+  
+}
+.background{
+    height: 300px;
+    width: 500px;
+    display: flex;
+    position: relative;
+    margin-left: 100px;
+}
+.hotel-title{
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+}
+.nav-img{
+    height: 40px;
+    width: auto;
+    position: relative;
+    left: 40px;
+    top: 10px;
+}

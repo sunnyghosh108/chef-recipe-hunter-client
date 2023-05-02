@@ -1,0 +1,15 @@
+.foot-data{
+    background-color: black;
+    display: flex;
+}
+.footer-text{
+    color: white   ;
+    text-align: center;
+}
+
+.footer-img{
+    height: 50px;
+    width: 80px;
+    position: relative;
+   left: 40px;
+}

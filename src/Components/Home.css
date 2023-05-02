@@ -1,0 +1,38 @@
+.hi{
+color: brown;
+text-align: center;
+}
+
+.background-home{
+    width: 100%;
+    height: 100%;
+}
+
+.header{
+    position: relative;
+    bottom: 200px;
+
+}
+.details{
+    position: relative;
+    bottom: 200px;
+}
+.text-1{
+text-align: center;
+color: white;
+font-size: 20px;
+}
+.text-2{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+.text-3{
+color:white;
+text-align: center;
+}
+.btn-book{
+    position: relative;
+    margin: 60px;
+   left: 250px;
+}
