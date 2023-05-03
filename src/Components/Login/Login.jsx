@@ -70,19 +70,7 @@ const Login = () => {
         })
     }
 // google
-    const provider=new GoogleAuthProvider();
-
-    const handleGoogleSignIn=()=>{
-      console.log('google')
-      signInWithPopup(auth,provider)
-      .then(result =>{
-        const user=result.user;
-        console.log(user);
-      })
-      .catch(error=>{
-        console.log('error',error.message)
-      })
-    }
+   
 
     const handleResetPassword = event=>{
      const email=emailRef.current.value;
@@ -111,7 +99,7 @@ const Login = () => {
 
               <input className='btn btn-primary' type="submit" value="Register" /> <br/>
 
-              <button onClick={handleGoogleSignIn}>Google login</button>
+             
             </form>
             <p><small>Forget password? please<button onClick={handleResetPassword} className='btn btn-link'>Reset Password</button></small></p>
             <p className='text-danger'><small>New to this website? please<Link to="/register">Register</Link></small></p>
