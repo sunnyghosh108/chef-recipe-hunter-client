@@ -36,3 +36,62 @@ text-align: center;
     margin: 60px;
    left: 250px;
 }
+
+.chef-info{
+    display: flex;
+    background-color: antiquewhite;
+}
+.chef-img{
+    height: 400px;
+    width: 400px;
+}
+.chef-details{
+    position: relative;
+    margin-top: 50px;
+    
+}
+
+/* .chef-recipe-catagories{
+
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+} */
+
+
+.recipes-info{
+ display: flex;   
+}
+
+.chef-recipe-image{
+    height: 286px;
+    width: 300px;
+}
+
+.recipe-text{
+    text-align: center;
+    color: orange;
+}
+.recipe-1{
+    display: flex;
+
+}
+.recipe-2{
+    display: flex;
+}
+
+/* testimonial*/
+.testimonial{
+    display: flex;
+}
+.testimony-1{
+    display: flex;
+    margin: 10px;
+}
+.happy-customer{
+    height: 80px;
+    width: auto;
+}
+.testimonial-text{
+    text-align: center;
+    color:orange;
+}

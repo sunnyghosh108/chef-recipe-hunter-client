@@ -8,6 +8,8 @@ const Catagories = ({catagories}) => {
      
 
     return (
+      
+  
       <div className='card-item'>
         <div className='product'>
       <img src={picture} alt="" />
@@ -24,6 +26,7 @@ const Catagories = ({catagories}) => {
           </button>
   </div>
       </div>
+      
     );
 };
 

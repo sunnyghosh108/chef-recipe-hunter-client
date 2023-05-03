@@ -12,13 +12,7 @@ const Footer = () => {
           <h2 className='footer-text'>  In Kicthen we do magic</h2>
           <h4 className='footer-text'> We are making best food in town</h4>
          </div>
-         <div>
-           <h3 className='footer-text'> Daily Deals</h3>
-           <img className='footer-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqtMf8ESFLbD7Vv7BMQY-AEuVpv_63PfqYeddpbi2wOcpsa3OnP9VMHJnRcGGvgBaieZw&usqp=CAU"></img>
-          
-           < img className='footer-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvFBZ86iiAAi4jH30ZTBrYeMHDQJ6hVtDjLmNcNKqdGfjnaFJqxdtwihoo6hPReDWUP0Q&usqp=CAU"></img>
-           
-         </div>
+         
          <div>
           <h4 className='footer-text'>Contact us</h4>
           <p className='footer-text'>Addres:Newyork,California city</p>
