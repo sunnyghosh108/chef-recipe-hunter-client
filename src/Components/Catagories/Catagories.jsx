@@ -22,7 +22,7 @@ const Catagories = ({catagories}) => {
       </div>
       < button className='btn-cart'>
           
-      <p><Link className='link' to="/login"> Details</Link>  </p>
+      <p><Link className='link' to=''> Details</Link>  </p>
           </button>
   </div>
       </div>

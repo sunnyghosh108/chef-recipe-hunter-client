@@ -10,6 +10,7 @@ const categoryData=useLoaderData();
         <div>
            
             <h2> This category:{categoryData.length}</h2>
+            <h2>Name:{categoryData.name}</h2>
             
         </div>
     );

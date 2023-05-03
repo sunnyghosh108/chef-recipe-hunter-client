@@ -43,6 +43,7 @@ const router = createBrowserRouter([
         path:'/category/:id',
         element:<Recipes></Recipes>,
         loader:({params})=>fetch(`http://localhost:5000/category/${params.id}`)
+        //loader:({params})=>fetch(`https://chief-recipe-hunter-server-sunnyghosh108.vercel.app/${params.id}`)
       }
     ]
   },

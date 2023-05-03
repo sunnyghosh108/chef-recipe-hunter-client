@@ -46,3 +46,10 @@
     left: 40px;
     top: 10px;
 }
+.logout{
+    height: 25px;
+    width: 60px;
+    
+    border-radius: 8px;
+    background-color: rgb(223, 223, 216);
+}
