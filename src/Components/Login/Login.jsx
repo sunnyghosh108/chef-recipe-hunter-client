@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import{ createUserWithEmailAndPassword, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth'; 
+import{ GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'; 
 import app from '../../firebase/firebase.config';
 import { Link } from 'react-router-dom';
 const auth =getAuth(app);
@@ -8,6 +8,12 @@ const Login = () => {
     const [error,setError]= useState('');
 
    const [success,setSuccess]=useState('');
+
+   
+   
+
+
+
    const emailRef=useRef();
     
    const handleSubmit=(event)=>{
@@ -20,20 +26,12 @@ const Login = () => {
           const password=event.target.password.value;
            console.log(email,password)
            //validate
-           if(!/(?=.*[A-Z])/.test(password)){
-            setError('please add at least one uppercase');
+           if(password.length<6){
+            setError('please add at least 6 characters in your password ')
             return;
-           }
-           else if(!/(?=.*[0-9].*[0-9])/.test(password)){
-            setError('please add at least two numbers')
-            return;
-           }
-            else if(password.length<6){
-              setError('please add at least 6 characters in your password ')
-              return;
+          } 
 
-            } 
-
+           
 
            //3. create user in firebase
            createUserWithEmailAndPassword(auth,email,password)
@@ -71,6 +69,20 @@ const Login = () => {
 
         })
     }
+// google
+    const provider=new GoogleAuthProvider();
+
+    const handleGoogleSignIn=()=>{
+      console.log('google')
+      signInWithPopup(auth,provider)
+      .then(result =>{
+        const user=result.user;
+        console.log(user);
+      })
+      .catch(error=>{
+        console.log('error',error.message)
+      })
+    }
 
     const handleResetPassword = event=>{
      const email=emailRef.current.value;
@@ -97,7 +109,9 @@ const Login = () => {
                 <input className='w-50 rounded ps-2 mb-4' onBlur={handlePasswordBlur} type="text" name="password" id="password" placeholder="Your password" required></input><br/>
                 
 
-              <input className='btn btn-primary' type="submit" value="Register" />
+              <input className='btn btn-primary' type="submit" value="Register" /> <br/>
+
+              <button onClick={handleGoogleSignIn}>Google login</button>
             </form>
             <p><small>Forget password? please<button onClick={handleResetPassword} className='btn btn-link'>Reset Password</button></small></p>
             <p className='text-danger'><small>New to this website? please<Link to="/register">Register</Link></small></p>

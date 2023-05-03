@@ -15,10 +15,10 @@ const Header = () => {
             <h2 className='hotel-title'>KODE-RESTURANT</h2>
             </div>
         <div className='menu'>
-        <Link to="/">Home</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/register">Register</Link>
-          <Link to='blog'>Blog</Link>
+        <Link   className='link-style' to="/">Home</Link>
+          <Link className='link-style' to="/login">Login</Link>
+          <Link className='link-style' to="/register">Register</Link>
+          <Link className='link-style' to='blog'>Blog</Link>
           
         </div>
         <div>

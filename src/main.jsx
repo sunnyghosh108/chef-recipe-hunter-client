@@ -14,6 +14,9 @@ import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
 import Blog from './Components/Blog/Blog.jsx';
 
+import Recipes from './Components/Recipes/Recipes.jsx';
+import AuthProvider from './Components/AuthProvider/AuthProvider.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +38,11 @@ const router = createBrowserRouter([
       {
         path:'/blog',
         element:<Blog></Blog>
+      },
+      {
+        path:'/category/:id',
+        element:<Recipes></Recipes>,
+        loader:({params})=>fetch(`http://localhost:5000/category/${params.id}`)
       }
     ]
   },
@@ -44,7 +52,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <AuthProvider>
+    <RouterProvider router={router} />
+    </AuthProvider>
      
   </React.StrictMode>,
 )

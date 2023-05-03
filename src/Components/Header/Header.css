@@ -18,8 +18,15 @@
     gap:30px;
     position: relative;
     top: 20px;
+    
   
 }
+.link-style{
+    text-decoration: none;
+}
+
+
+
 .background{
     height: 300px;
     width: 500px;

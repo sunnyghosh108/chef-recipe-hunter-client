@@ -5,15 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD31RSPP0PKSeN1gxI_AbjmBZf1BEhLFjM",
-  authDomain: "auth-test-firebase-bcfe8.firebaseapp.com",
-  projectId: "auth-test-firebase-bcfe8",
-  storageBucket: "auth-test-firebase-bcfe8.appspot.com",
-  messagingSenderId: "60495601189",
-  appId: "1:60495601189:web:b013ed0054651e65b529cc"
+  apiKey: "AIzaSyDkqA8LmTOxHyGKDf5bmqkvNk_BG05ATwI",
+  authDomain: "chief-recipe-hunter.firebaseapp.com",
+  projectId: "chief-recipe-hunter",
+  storageBucket: "chief-recipe-hunter.appspot.com",
+  messagingSenderId: "899856466083",
+  appId: "1:899856466083:web:45e12682f57a989d01bf16"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 export default app;

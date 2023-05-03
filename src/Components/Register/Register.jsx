@@ -22,15 +22,7 @@ const Register = () => {
           const name=event.target.name.value;
            console.log(name,email,password)
            //validate
-           if(!/(?=.*[A-Z])/.test(password)){
-            setError('please add at least one uppercase');
-            return;
-           }
-           else if(!/(?=.*[0-9].*[0-9])/.test(password)){
-            setError('please add at least two numbers')
-            return;
-           }
-            else if(password.length<6){
+            if(password.length<6){
               setError('please add at least 6 characters in your password ')
               return;
 
@@ -44,7 +36,7 @@ const Register = () => {
             console.log(loggedUer);
             setError('');
             event.target.reset();
-            setSuccess('Welcome to grand Hotel')
+            setSuccess('WELCOME TO KODE RESTURANT')
             sendVerificationEmail(result.user);
             updateUserData(result.user,name)
           })
@@ -96,7 +88,7 @@ const Register = () => {
 
                 <input className='w-50 rounded ps-2   mb-4' onChange={handleEmailChange} type="email" name="email" id="email" placeholder="Your email" required/><br/>
                 <input className='w-50 rounded ps-2 mb-4' onBlur={handlePasswordBlur} type="password" name="password" id="password" placeholder="Your password" required></input><br/>
-                
+                <input className='w-50 rounded ps-2 mb-4' type='photo' id='photoUrl' placeholder='photoUrl' required></input><br/>
 
               <input className='btn btn-primary' type="submit" value="Register" />
             </form>
