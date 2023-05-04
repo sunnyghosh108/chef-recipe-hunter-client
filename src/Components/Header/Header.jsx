@@ -31,7 +31,7 @@ const handleLogout=()=>{
          }
         </div> 
         <div>
-            <img className='nav-img' src='../../../public/image/user-1.png'/>
+            <img className='nav-img' src='/image/user-1.png'/>
         </div>
         </nav>
     );
