@@ -3,10 +3,10 @@ import './Catagories.css'
 import { Link } from 'react-router-dom';
 
 const Catagories = ({catagories}) => {
-    const{picture,name,years_of_experience,num_of_recipes,likes  }=catagories;
+    const{picture,name,years_of_experience,num_of_recipes,likes,id  }=catagories;
     console.log(catagories)
      
-
+      
     return (
       
   
@@ -18,11 +18,11 @@ const Catagories = ({catagories}) => {
           <p>CHEF NAME: {name}</p>
           <p>Experience of year:{years_of_experience}</p>
           <p> Number of recipes:{num_of_recipes}</p>
-          <p>  {likes}</p>
+          <p>Likes:{likes}</p>
       </div>
       < button className='btn-cart'>
           
-      <p><Link className='link' to=''> Details</Link>  </p>
+      <p><Link className='link' to={`/category/${id}`}>View Details</Link>  </p>
           </button>
   </div>
       </div>

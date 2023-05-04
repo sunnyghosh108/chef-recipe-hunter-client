@@ -8,7 +8,7 @@ const Footer = () => {
     <div className='foot-data'>
          <div>
           <h3 className='footer-text'>About us</h3>
-          <p className='footer-text'>Lorem, ipsum dolor site consectetur adipisicing elit. </p>
+          
           <h2 className='footer-text'>  In Kicthen we do magic</h2>
           <h4 className='footer-text'> We are making best food in town</h4>
          </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Register.css'
 import{ createUserWithEmailAndPassword, getAuth, sendEmailVerification, updateProfile } from 'firebase/auth'; import app from '../../firebase/firebase.config';
 import { Link } from 'react-router-dom';
+import './Register.css'
 
 
 const auth =getAuth(app);
@@ -80,7 +81,7 @@ const Register = () => {
         console.log(event.target.value);
     }
     return (
-        <div className='w-50 mx-auto'>
+        <div className='form-container'>
             <h2>Please Register</h2>
             <form onSubmit={handleSubmit}>
               {/* //2 */}

@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import{ GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'; 
 import app from '../../firebase/firebase.config';
 import { Link } from 'react-router-dom';
+import './Login.css'
 const auth =getAuth(app);
 
 const Login = () => {
@@ -90,21 +91,26 @@ const Login = () => {
 
 
     return (
-        <div className='w-50 mx-auto'>
-            <h2>Please Login</h2>
+        <div className='form-container'>
+            <h2 className='form-title'>Please Login</h2>
             <form onSubmit={handleSubmit}>
-                <input className='w-50 rounded ps-2   mb-4' onChange={handleEmailChange} type="email" name="email" ref={emailRef} id="email" placeholder="Your email" required/><br/>
-                <input className='w-50 rounded ps-2 mb-4' onBlur={handlePasswordBlur} type="text" name="password" id="password" placeholder="Your password" required></input><br/>
-                
-
-              <input className='btn btn-primary' type="submit" value="Register" /> <br/>
-
+                <div className='form-control'>
+                <input className='' onChange={handleEmailChange} type="email" name="email" ref={emailRef} id="email" placeholder="Your email" required/><br/>
+                </div>
+                <div className='form-control'>
+                <input className='' onBlur={handlePasswordBlur} type="text" name="password" id="password" placeholder="Your password" required></input><br/>
+                </div>
+               <div className='form-control'>
+              <input className='' type="submit" value="Register" /> <br/>
+              </div>
              
             </form>
-            <p><small>Forget password? please<button onClick={handleResetPassword} className='btn btn-link'>Reset Password</button></small></p>
-            <p className='text-danger'><small>New to this website? please<Link to="/register">Register</Link></small></p>
-            <p className='text-danger'>{error}</p>
-            <p className='text-success'>{success}</p>
+            <div className=''>
+            <p><small>Forget password? please<button onClick={handleResetPassword} className='btn'>Reset Password</button></small></p>
+            <p className='form-end'><small>New to this website? please<Link to="/register">Register</Link></small></p>
+            <p className=''>{error}</p>
+            <p className='text'>{success}</p>
+            </div>
         </div>
     );
 };
