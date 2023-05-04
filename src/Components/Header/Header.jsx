@@ -14,20 +14,22 @@ const handleLogout=()=>{
 }
 
 
+
+
     return (
         <nav className='flex'>
             <div className='title'>
             <h2 className='hotel-title'>KODE-RESTURANT</h2>
             </div>
         <div className='menu'>
-        <Link   className='link-style' to="/">Home</Link>
-          <Link className='link-style' to="/login">Login</Link>
-          <Link className='link-style' to="/register">Register</Link>
-          <Link className='link-style' to='blog'>Blog</Link>
+        <Link  className='link-style' to="/">Home</Link>
+          <Link  className='link-style' to="/login">Login</Link>
+          <Link  className='link-style' to="/register">Register</Link>
+          <Link  className='link-style' to='blog'>Blog</Link>
          {
             user && <button className='logout' onClick={handleLogout}>Logout</button>
          }
-        </div>
+        </div> 
         <div>
             <img className='nav-img' src='../../../public/image/user-1.png'/>
         </div>
