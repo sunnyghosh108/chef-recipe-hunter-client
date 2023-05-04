@@ -13,7 +13,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     console.log('login page location', location)
-    const from = location.state?.from?.pathname || '/category/0'
+    const from = location.state?.from?.pathname || '/'
 
     const handleLogin = event => {
         event.preventDefault();
@@ -54,8 +54,7 @@ const Login = () => {
            
             <p className='form-end'><small>New to this website? please<Link to="/register">Register</Link></small></p>
 
-            <p className=''>{error}</p>
-            <p className='text'>{success}</p>
+          
            <div className='social-icon'>
              <div>
              <p>  <FaGoogle> </FaGoogle></p>
