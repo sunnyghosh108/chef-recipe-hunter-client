@@ -1,6 +1,7 @@
 .foot-data{
     background-color: black;
     display: flex;
+    gap: 20px;
 }
 .footer-text{
     color: white   ;
