@@ -7,7 +7,7 @@ const Home = () => {
 
     const [category,setCategory]=useState([]);
     useEffect(()=>{
-     fetch('http://localhost:5000/category')
+     fetch('https://chief-recipe-hunter-server-sunnyghosh108.vercel.app/category')
      .then(res=>res.json())
      .then (data=>setCategory(data))
      .catch(error=>console.error(error))

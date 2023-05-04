@@ -16,6 +16,7 @@ import Blog from './Components/Blog/Blog.jsx';
 
 import Recipes from './Components/Recipes/Recipes.jsx';
 import AuthProvider from './Components/AuthProvider/AuthProvider.jsx';
+import PrivateRoute from './Components/AuthProvider/Routes/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -41,9 +42,9 @@ const router = createBrowserRouter([
       },
       {
         path:'/category/:id',
-        element:<Recipes></Recipes>,
-        loader:({params})=>fetch(`http://localhost:5000/category/${params.id}`)
-        //loader:({params})=>fetch(`https://chief-recipe-hunter-server-sunnyghosh108.vercel.app/${params.id}`)
+        element:<PrivateRoute><Recipes></Recipes></PrivateRoute>,
+       // loader:({params})=>fetch(`http://localhost:5000/category/${params.id}`)
+        loader:({params})=>fetch(`https://chief-recipe-hunter-server-sunnyghosh108.vercel.app/category/${params.id}`)
       }
     ]
   },
