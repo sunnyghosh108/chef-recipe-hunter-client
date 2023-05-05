@@ -2,6 +2,9 @@
 import React from 'react';
  
 import './Footer.css';
+import fb from '../../../public/icons/fb.png'
+import twitter from '../../../public/icons/twitter.png'
+import youtube from '../../../public/icons/youtube.png'
 const Footer = () => {
     return (
         <div className="foot"> 
@@ -15,14 +18,17 @@ const Footer = () => {
          
          <div>
           <h4 className='footer-text'>Contact us</h4>
-          <p className='footer-text'>Addres:Newyork,California city</p>
           <p className='footer-text'>Email:koderesturant321@gmail.com</p>
           <p className='footer-text'>Phone:+8920000001</p>
           <p className='footer-text'>Timing:Everyday 8am-0.00</p>
          </div>
+         {/* <div className='ico-all'>
+        <img className='ico' src={fb} />
+        <img className='ico' src={youtube} />
+        <img className='ico' src={twitter} />
+       </div> */}
 
-     </div>
-            
+     </div>   
         </div>
         
 

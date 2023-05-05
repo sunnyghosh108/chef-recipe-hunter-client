@@ -7,7 +7,7 @@ const Home = () => {
 
     const [category,setCategory]=useState([]);
     useEffect(()=>{
-     fetch('https://chief-recipe-hunter-server-sunnyghosh108.vercel.app/category')
+     fetch(' https://chief-recipe-hunter-server-sunnyghosh108.vercel.app/category')
      .then(res=>res.json())
      .then (data=>setCategory(data))
      .catch(error=>console.error(error))
@@ -17,23 +17,25 @@ const Home = () => {
 
     return (
         <div>
-            <div className=''>
+            <div className='body'>
                 
-             <img className='background-home' src="http://kodeforest.net/wp-demo/foodcourt/wp-content/uploads/2016/06/banner-1.jpg"></img>
-            </div>
+            
+            
             <div className='header'>
             <div className='details'>
             <div >
                 <h4 className='text-1'>  Welcome to our Resturant</h4>
                 <h1 className='text-2'>Amazing and Delicious Food</h1>
                <p className='text-3'> Our food's philosphy is Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, aliquam? <br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptates?<br/>It is famous mostly for its long natural  and it ...</p>
-               <button className='btn-book'> MORE DETAILS</button>
+               
             </div>
             </div>
             
          </div>
-         
-
+         </div>
+        
+         <h2 className='chefs'>Our honourable Chefs</h2>
+         <hr className='hr'></hr>
      <div className='catagories'>
         
        {
@@ -73,35 +75,7 @@ const Home = () => {
            </div>
           </div>          
          </div>
-         <div className='testimony'>
-         <h4 className='testimonial-text'>Our Testimonial</h4>
-         <div className='testimonial'>
-            <div className='testimony-1'>
-              <div>
-                <img className='happy-customer' src="http://kodeforest.net/wp-demo/foodcourt/wp-content/uploads/2016/06/testimonial2-150x150.jpg"/>
-              </div>
-              <div>
-              <h4>Jhon Dea</h4>
-              <h5>Happy Customer</h5>
-              <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, est!"
-                </p>
-              </div>
-            </div>
-            <div className='testimony-1'>
-                
-              <div>
-                <img className='happy-customer' src="http://kodeforest.net/wp-demo/foodcourt/wp-content/uploads/2016/06/1shutterstock_20605495-150x150.jpg"/>
-              </div>
-              <div>
-              <h4>Sara Maria</h4>
-              <h5>Happy Customer</h5>
-              <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, est!"
-                </p>
-              </div>
-            </div>
-
-         </div>
-         </div>
+         
        
  </div>    
     );

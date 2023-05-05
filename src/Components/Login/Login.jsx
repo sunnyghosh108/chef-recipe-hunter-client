@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useState } from 'react';
-import{ GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'; 
+import{ GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'; 
 import app from '../../firebase/firebase.config';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
@@ -8,8 +8,9 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 const auth =getAuth(app);
 
 const Login = () => {
-
-    const { signIn } = useContext(AuthContext);
+     const provider=new GoogleAuthProvider()
+     const githubProvider=new GithubAuthProvider()
+    const { signIn,googleSignIn,githubSignIn} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     console.log('login page location', location)
@@ -33,7 +34,29 @@ const Login = () => {
             })
     }
    
-
+    const handleGoogle=()=>{
+        googleSignIn(provider)
+        .then(result=>{
+            const googleUser=result.user;
+            console.log(googleUser)
+            navigate(from, { replace: true })
+        })
+        .catch(error=>{
+            console.log(error.message)
+        })
+    }
+    
+    const handleGithub=()=>{
+        githubSignIn(githubProvider)
+        .then(result=>{
+            const githubUser=result.user;
+            console.log(githubUser)
+            navigate(from, { replace: true })
+        })
+        .catch(error=>{
+            console.log(error.message)
+        })
+    }
     
 
     return (
@@ -45,9 +68,13 @@ const Login = () => {
                 </div>
                 <div className='form-control'>
                 <input className=''type="text" name="password" id="password" placeholder="Your password" required></input><br/>
+               
+                </div>
+                <div className='form-control'>
+                <button > Login</button> 
                 </div>
                
-              <button > Login</button>
+              {/* <button > Login</button> */}
             </form>
             <div className=''>
             
@@ -57,9 +84,9 @@ const Login = () => {
           
            <div className='social-icon'>
              <div>
-             <p>  <FaGoogle> </FaGoogle></p>
+             <p onClick={handleGoogle}>  <FaGoogle className='google'> </FaGoogle></p>
              </div>
-             <p> <FaGithub></FaGithub> </p>
+             <p onClick={handleGithub}> <FaGithub className='github'></FaGithub> </p>
            </div>
             </div>
         </div>

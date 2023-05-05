@@ -5,7 +5,7 @@
 }
 .card{
     display: flex;
-    width: 500px;
+    width: 400px;
     height: 250px;
     border: 2px solid #95A0A7;
     border-radius: 8px;
@@ -47,10 +47,18 @@
     width: 100px;
    
 }
+.rating{
+    display: flex;
+    gap:30px;
+    position: relative;
+    bottom: 30px;
+}
 
 
 .favorite{
     background-color: #becad1;
+    position: relative;
+    margin: 20px;
 }
 
 
@@ -58,6 +66,15 @@
     .recipes-all-card{
         grid-template-columns: repeat(1,1fr);
         gap: 10px;
+       text-align: center;
+        
     }
+    .recipe-item-1{
+        text-align: center;
+    }
+    .card{
+        width: 380px;;
+    }
+    
 }
 

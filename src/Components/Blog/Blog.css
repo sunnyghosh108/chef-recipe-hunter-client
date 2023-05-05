@@ -24,3 +24,12 @@ border: 2px solid rgb(116, 114, 114);
     text-align: left;
     
 }
+
+@media screen and (max-width:768px){
+    .question-1{
+        
+        display: flex;
+       gap: 5px;
+     border: 2px solid rgb(116, 114, 114);
+    }
+  }

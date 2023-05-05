@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import './Recipes.css';
 import toast, { Toaster } from 'react-hot-toast';
+import LazyLoad from 'react-lazy-load';
 
 
 const Recipes = () => {
@@ -34,12 +35,16 @@ category.recipes.forEach(function (recipe){
          
         <div className='card'>
         <figure>
+        <LazyLoad height={762}>
             <img className='chef-images' src={category.picture} />
+            </LazyLoad>
          </figure>
             <div className='card-body'>
               <h4 className='chef-name'> {category.name}</h4>
               <h5>{category.bio}</h5>
-              <h6>Likes:{category.likes}</h6>
+              <h4>Likes:{category.likes}</h4>
+             
+             
               
             </div>
         </div>

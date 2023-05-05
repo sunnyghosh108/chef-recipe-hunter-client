@@ -9,7 +9,8 @@ const Catagories = ({catagories}) => {
       
     return (
       
-  
+     <>
+   
       <div className='card-item'>
         <div className='product'>
       <img src={picture} alt="" />
@@ -22,11 +23,11 @@ const Catagories = ({catagories}) => {
       </div>
       < button className='btn-cart'>
           
-      <p><Link className='link' to={`/category/${id}`}>View Details</Link>  </p>
+      <p><Link className='link' to={`/category/${id}`}>View Recipies</Link>  </p>
           </button>
   </div>
       </div>
-      
+      </> 
     );
 };
 

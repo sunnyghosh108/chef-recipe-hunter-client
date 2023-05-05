@@ -2,11 +2,13 @@
     display:flex;
    
     top: 5px;
-    height: 60px;
+    
     justify-content: space-evenly;
     gap:20px;
     background-color: antiquewhite;
 }
+
+
 .flex h2{
     position: relative;
     text-align: center;
@@ -23,7 +25,12 @@
 }
 .link-style{
     text-decoration: none;
+    color:blue;
 }
+.link{
+    text-decoration: none;
+}
+    
 
 
 
@@ -39,6 +46,7 @@
     position: relative;
     top: 5px;
 }
+
 .nav-img{
     height: 40px;
     width: auto;
@@ -50,6 +58,34 @@
     height: 25px;
     width: 60px;
     
-    border-radius: 8px;
+    border-radius: 2px solid rounded;
     background-color: rgb(223, 223, 216);
+}
+@media screen and (max-width:768px){
+    .flex{
+      text-align: center;
+     flex-direction:column;       
+    }
+    .menu{
+        flex-direction: column;
+        gap:5px;
+        position: relative;
+        top: 5px;
+        text-align: center;
+        
+    }
+   .nav-img{
+       align-items: center;
+       position: relative;
+       right:1000px;
+      bottom:800px
+    }
+    .logout{
+        text-align: center;
+        position: relative;
+        left:140px
+    }
+    .nav-icon{
+    text-align: center;
+    }
 }

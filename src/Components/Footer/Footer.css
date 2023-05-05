@@ -14,5 +14,18 @@
     text-align: center;
 }
 
+.ico-all{
+  position: relative;
+  top: 30px;
+  
+}
+.ico{
+  height: 30px;
+  position: relative;
+  gap:30px;
+  width: auto;
+  
+}
+
 
 

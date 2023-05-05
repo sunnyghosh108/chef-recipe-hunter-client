@@ -2,20 +2,31 @@
 color: brown;
 text-align: center;
 }
+.body{
+    background-image: url("http://kodeforest.net/wp-demo/foodcourt/wp-content/uploads/2016/06/banner-1.jpg");
+}
 
 .background-home{
     width: 100%;
-    height: 100%;
+   
 }
-
+.chefs{
+    color:darksalmon;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 30px;
+    
+}
+.hr{
+    width: 50%;
+}
 .header{
-    position: relative;
-    bottom: 200px;
-
+   text-align: center;
+ 
 }
 .details{
-    position: relative;
-    bottom: 200px;
+   text-align: center;
 }
 .text-1{
 text-align: center;
@@ -31,10 +42,11 @@ font-size: 20px;
 color:white;
 text-align: center;
 }
+
 .btn-book{
     position: relative;
     margin: 60px;
-   left: 250px;
+  
 }
 
 .chef-info{
@@ -94,4 +106,20 @@ text-align: center;
 .testimonial-text{
     text-align: center;
     color:orange;
+}
+@media screen and (max-width:768px){
+    .chef-info{
+      
+     flex-direction:column;       
+    }
+    .testimony-1{
+        flex-direction:column; 
+        position: relative;
+        left: 60px; 
+    }
+    .recipes-info{
+        flex-direction:column;  
+        position: relative;
+        left: 60px;
+    }
 }
