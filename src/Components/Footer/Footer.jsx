@@ -22,11 +22,7 @@ const Footer = () => {
           <p className='footer-text'>Phone:+8920000001</p>
           <p className='footer-text'>Timing:Everyday 8am-0.00</p>
          </div>
-         {/* <div className='ico-all'>
-        <img className='ico' src={fb} />
-        <img className='ico' src={youtube} />
-        <img className='ico' src={twitter} />
-       </div> */}
+         
 
      </div>   
         </div>
